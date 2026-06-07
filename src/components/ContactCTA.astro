@@ -1,0 +1,69 @@
+---
+import CallToAction from './CallToAction.astro';
+import Icon from './Icon.astro';
+---
+
+<aside>
+	<h2>お仕事のご相談・企画の持ち込みはこちら</h2>
+	<div class="cta-buttons">
+		<CallToAction href="https://forms.gle/cxHJQggULXwWKeKm6">
+			問い合わせフォーム
+			<Icon icon="paper-plane-tilt" size="1.2em" />
+		</CallToAction>
+
+		<CallToAction href="mailto:shikigami699@gmail.com">
+			メールで直接連絡
+			<Icon icon="heart" size="1.2em" />
+		</CallToAction>
+	</div>
+</aside>
+
+<style>
+	aside {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 3rem;
+		border-top: 1px solid var(--gray-800);
+		border-bottom: 1px solid var(--gray-800);
+		padding: 5rem 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	h2 {
+		font-size: var(--text-xl);
+		text-align: center;
+		max-width: 15ch;
+	}
+
+	/* ボタンを2つ並べるためのコンテナスタイル */
+	.cta-buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		width: 100%;
+		align-items: center;
+	}
+
+	@media (min-width: 50em) {
+		aside {
+			padding: 7.5rem;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		h2 {
+			font-size: var(--text-3xl);
+			text-align: left;
+		}
+
+		/* 画面が広くなったら横並びにする */
+		.cta-buttons {
+			flex-direction: row;
+			width: auto;
+			gap: 2rem;
+		}
+	}
+</style>

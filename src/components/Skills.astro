@@ -1,0 +1,62 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="box skills">
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="pencil-line" color="var(--accent-regular)" size="2.5rem" />
+		<h2>音声作品への特化</h2>
+		<p>単にセリフを書く「ライター」としてだけでなく、状況や位置関係、キャラクターが想像しやすいワード選びと、リスナーの性的興奮を煽る構成を意識した「スクリプター」として、現場が迷わないシンプルで読みやすい台本を提供します。</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" />
+		<h2>論理的構成力</h2>
+		<p>数々のシナリオ・小説執筆経験に加えて、プログラミング（Pythonでのデータ分析や物理シミュレーション開発など）のスキルを活かし、シナリオの「起承転結のプロット構造」や「キャラクターの感情曲線」を論理的に計算して執筆します。徹底的なリサーチ力も強みです。</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" />
+		<h2>稼働コミット力</h2>
+		<p>週２本以上のペース（数千字から１万字規模）の台本納品を安定して完了・納品できるリソースを常に確保しています。締切の厳守はもちろん、密な進捗報告で進行管理の負担を激減させます。</p>
+	</div>
+</section>
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>
