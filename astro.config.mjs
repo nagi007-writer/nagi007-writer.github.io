@@ -2,6 +2,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  // あなたのGitHub PagesのトップURL（独自ドメインがあればそれを指定）
+  // あなたのGitHub PagesのトップURL（独自ドメインがあればそれを指定） test
   site: 'https://nagi007-writer.github.io',
 });
