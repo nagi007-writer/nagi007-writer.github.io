@@ -147,4 +147,29 @@ const { Content } = await render(entry);
 			font-size: var(--text-2xl);
 		}
 	}
+	/* ボタン風の装飾（Markdown内でも有効にするため :global を使用） */
+	:global(.btn) {
+  		display: inline-block;
+  		padding: 0.6rem 1.2rem;
+		margin-right: 0.5rem;
+		margin-bottom: 0.5rem;
+  		border-radius: 0.5rem;
+  		font-weight: bold;
+  		text-decoration: none !important;
+  		color: #ffffff !important;
+  		transition: opacity 0.2s ease;
+	}
+
+	:global(.btn:hover) {
+  		opacity: 0.85;
+	}
+
+	/* DLsite用などのアクセントカラー */
+	:global(.btn-dlsite) {
+  		background-color: #3182ce;
+	}
+	/* FANZA用などのアクセントカラー */
+	:global(.btn-fanza) {
+  		background-color: #ce3131;
+	}
 </style>
